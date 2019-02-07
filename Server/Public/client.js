@@ -18,5 +18,13 @@ function onReady(){
         }
     });
 
+    $('#button').on('click', function (){
+       let commonName = $('#commonName').val();
+       let scientificName = $('#scientificName').val();
+       console.log(commonName, scientificName);
+    })
+       
+    
+
 
 }

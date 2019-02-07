@@ -1,17 +1,18 @@
 const wolves = require('../server/Modules/wolves');
 
+let PORT = 5000;
+
 let express = require('express');
 
 let app = express();
 
-app.use(express.static('server/public'))
+app.use(express.static('server/public'));
 
-app.get('/wolves', function (req, res) {
+app.get('/wolves',  (req, res) =>{
     res.send(wolves)
 })
 
-
-app.listen(5000, function () {
-    console.log('Running on port 5000');
+app.listen(PORT,  () => {
+    console.log('Running on port', PORT);
 });
 
