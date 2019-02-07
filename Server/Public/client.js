@@ -18,13 +18,24 @@ function onReady(){
         }
     });
 
-    $('#button').on('click', function (){
-       let commonName = $('#commonName').val();
-       let scientificName = $('#scientificName').val();
-       console.log(commonName, scientificName);
-    })
-       
-    
-
-
+    $('#button').on('click', handleAddClick);
 }
+
+function handleAddClick(){
+    // let commonName = $('#commonName').val();
+    // let scientificName = $('#scientificName').val();
+    // console.log(commonName, scientificName);
+
+    $.ajax({
+        method: 'POST',
+        url: '/new',
+        data: {
+            commonName: $('#commonName').val(),
+            scientificName: $('#scientificName').val()
+        }
+    })
+
+    $('#commonName').val('');
+    $('#scientificName').val('');
+
+};
