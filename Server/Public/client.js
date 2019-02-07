@@ -33,6 +33,24 @@ function handleAddClick(){
             commonName: $('#commonName').val(),
             scientificName: $('#scientificName').val()
         }
+    }).then(function(){
+        $.ajax({
+            method: 'GET',
+            url: '/wolves'
+        }).then(function (response) {
+            $('#wolvesTableBody').empty();
+            for (let i = 0; i < response.length; i++) {
+                let wolves = response[i];
+                $('#wolvesTableBody').append(`
+                <tr>
+                    <td>${wolves.commonName}</td>
+                    <td>${wolves.scientificName}</td>
+                    
+                </tr>
+            `);
+            }
+        });
+
     })
 
     $('#commonName').val('');

@@ -8,24 +8,29 @@
     <script src="jquery.js"></script>
     <script src="client.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 </head>
 <body>
-    <h1>Wolves</h1>
-    <p>
-    <input type="text" placeholder="Common Name" id="commonName">
-    <input type="text" placeholder="Scientific Name" id="scientificName">
-    <button id="button">submit</button>
-    </p>
-    <table>
-        <thead>
-            <tr>
-                <th>Common Name</th>
-                <th>Scientific Name</th>
-            </tr>
-        </thead>
-        <tbody id="wolvesTableBody"></tbody>
-    </table>
-    
+    <div id="parent">
+        <h1>Wolves</h1>
+        
+        <div id="child">
+            <p>
+            <input type="text" placeholder="Common Name" id="commonName">
+            <input type="text" placeholder="Scientific Name" id="scientificName">
+            <button id="button">submit</button>
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Common Name</th>
+                        <th>Scientific Name</th>
+                    </tr>
+                </thead>
+                <tbody id="wolvesTableBody"></tbody>
+            </table>
+        </div>
+    </div>
     
 
 </body>

@@ -16,7 +16,9 @@ app.get('/wolves',  (req, res) =>{
 });
 
 app.post('/new', (req, res) =>{
-    req.body
+    req.body;
+    wolves.push(req.body);
+    res.sendStatus(201);
 });
 
 
